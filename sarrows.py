@@ -2,7 +2,7 @@ import string
 
 DIGITS = '0123456789'
 Beng_DIGITS = '০১২৩৪৫৬৭৮৯'
-LETTERS = 'অআইঈউঊঋএঐওঔকখগঘঙচছজঝঞটঠডঢণতথদধনপফবভমযরলশষসহড়ঢ়য়ংবাশক্তিনহিলেযদিমজাযো' + string.ascii_letters + Beng_DIGITS
+LETTERS = 'অআইঈউঊঋএঐওঔকখগঘঙচছজঝঞটঠডঢণতথদধনপফবভমযরলশষসহড়ঢ়য়ংবাশক্তিনহিলেযদিমজায্রত্যাশিতবর্ণো' + string.ascii_letters + Beng_DIGITS
 LETTERS_DIGITS = LETTERS + DIGITS + Beng_DIGITS
 
 def string_with_arrows(text, pos_start, pos_end):
