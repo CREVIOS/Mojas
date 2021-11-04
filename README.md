@@ -1,6 +1,6 @@
 # Disclaimer
 
-Main Strcuture function is added yet, so please wait before adding it in a week. 
+Main Strcuture function is not added yet, so please wait before adding it in a week. 
 
 # Mojas
 --> A Bengali Programming Language where all syntax in Bengali language and it is written python
