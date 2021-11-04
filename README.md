@@ -11,3 +11,17 @@ So, first, this language will be used to teach them the basic programming struct
 
 ## Seatbacks
 As I wrote an interpreted language, it will be great to write it in a compiled language (like C, C++, or Swift) because the performance lost in the language of my interpreter and the interpreter that is interpreting my interpreter will compound. If it was a compiled language that I am creating, a slower language (like Python or JavaScript) would be good. Compile-time may be bad, but in my opinion, that isn’t nearly as big a deal as bad run time. But I wrote mojas in python; until now, it is interpreted language, and I am trying to convert it into a compiled one.
+
+### Strings
+'''
+:: Mojas >>> "এটি একটি লাইন"
+Output: "এটি একটি লাইন"
+:: Mojas >>> "লাইন" * 3
+Output: "লাইনলাইনলাইন"
+:: Mojas >>> মজা অনি(ক,নাম)-> "এটি" * ক + নাম
+Output: <function অনি>
+:: Mojas >>> অনি(5,"লাইন")
+Output: "এটিএটিএটিএটিএটিলাইন"
+:: Mojas >>> অনি(15,"লাইন")
+Output: "এটিএটিএটিএটিএটিএটিএটিএটিএটিএটিএটিএটিএটিএটিএটিলাইন"
+'''
