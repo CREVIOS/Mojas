@@ -11,7 +11,43 @@ So, first, this language will be used to teach them the basic programming struct
 
 ## Seatbacks
 As I wrote an interpreted language, it will be great to write it in a compiled language (like C, C++, or Swift) because the performance lost in the language of my interpreter and the interpreter that is interpreting my interpreter will compound. If it was a compiled language that I am creating, a slower language (like Python or JavaScript) would be good. Compile-time may be bad, but in my opinion, that isn’t nearly as big a deal as bad run time. But I wrote mojas in python; until now, it is interpreted language, and I am trying to convert it into a compiled one.
+### Statements
+```
+:: Mojas >>> চলক  কম = 2020
+Output: 2020
+:: Mojas >>> চলক  কমচ = যদি কম >= 2000 তারপর 2002 তারদি কম <= 2021 তারপর 2019  নহিলে 2050
+Output: 2002
+```
 
+
+### For Loop
+```
+:: Mojas >>> চলক ক = 1
+Output: 1
+:: Mojas >>> যে চ = 1 থেকে 5 তারপর  চলক ক = চ*ক
+:: Mojas >>> ক
+Output: 24
+:: Mojas >>> চলক ক1 = ক
+Output: 24
+:: Mojas >>> যে চ = 1 থেকে 5 ধাপ 2 তারপর  চলক ক1 = (চ^চ)+ ক1   // calculation    \sum_{1}^{4}{x^2+k} 
+:: Mojas >>> ক1
+Output: 52   
+:: Mojas >>> চলক কক = 1 
+Output: 1
+:: Mojas >>> যে চ = 2 থেকে 11 ধাপ 1 তারপর  চলক কক = চ+কক  // calculation of  \sum_{1}^{10}x
+:: Mojas >>> কক
+Output: 55
+```
+
+### Functions 
+```
+:: Mojas >>> মজা যোগ(ক,খ) -> ক+খ // Declaring-Function function-name(a,b) -> a+b
+:: Mojas >>> যোগ(1001,1020) // function-name(1000,1020)
+Output: 2021
+:: Mojas >>> মজা আমরা(ক,খ,গ,ঘ) -> ((ক+খ)^গ)+ঘ   // Declaring-Function function-name(a,b,c,d) -> ((a+b)^c)+d
+:: Mojas >>>আমরা(1,2,3,4)   //function-name(1,2,3,4)
+Output: 31
+```
 ### Strings
 
 ```
