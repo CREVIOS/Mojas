@@ -2,6 +2,9 @@
 
 Main Strcuture function ist added, so please wait before final version in two days. It is undergoing some update...
 
+# Upcoming Update
+I will introduce list in Mojas. keep an eye ont it.
+
 # Mojas
 --> A Bengali Programming Language where all syntax in Bengali language and it is written python
 
