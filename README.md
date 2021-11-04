@@ -16,12 +16,39 @@ So, first, this language will be used to teach them the basic programming struct
 ## Seatbacks
 As I wrote an interpreted language, it will be great to write it in a compiled language (like C, C++, or Swift) because the performance lost in the language of my interpreter and the interpreter that is interpreting my interpreter will compound. If it was a compiled language that I am creating, a slower language (like Python or JavaScript) would be good. Compile-time may be bad, but in my opinion, that isn’t nearly as big a deal as bad run time. But I wrote mojas in python; until now, it is interpreted language, and I am trying to convert it into a compiled one.
 
-### Variable
+### English Grammar of Mojas 
 ```
-### Grammar 
-expr				: KEYWORD:VAR IDENTIFIER EQ expr
-						: comp-expr ((KEYWORD:AND|KEYWORD:OR) comp-expr)*
-        
+expr			: KEYWORD:VAR IDENTIFIER EQ expr
+			: comp-expr ((KEYWORD:AND|KEYWORD:OR) comp-expr)*
+
+comp-expr		: NOT comp-expr
+			: arith-expr ((EE|LT|GT|LTE|GTE) arith-expr)*
+
+arith-expr	        :	term ((PLUS|MINUS) term)*
+
+term			: factor ((MUL|DIV) factor)*
+
+factor			: (PLUS|MINUS) factor
+			: power
+
+power			: call (POW factor)*
+
+call			: atom (LPAREN (expr (COMMA expr)*)? RPAREN)?
+
+atom 			: INT|FLOAT|STRING|IDENTIFIER
+				: LPAREN expr RPAREN
+				: if-expr
+				: for-expr
+				: while-expr
+				: func-def
+
+if-expr			: KEYWORD:IF expr KEYWORD:THEN expr (KEYWORD:ELIF expr KEYWORD:THEN expr)* (KEYWORD:ELSE expr)?
+
+for-expr		: KEYWORD:FOR IDENTIFIER EQ expr KEYWORD:TO expr  (KEYWORD:STEP expr)? KEYWORD:THEN expr
+
+while-expr	        : KEYWORD:WHILE expr KEYWORD:THEN expr
+
+func-def		: KEYWORD:FUN IDENTIFIER? LPAREN (IDENTIFIER (COMMA IDENTIFIER)*)? RPAREN ARROW expr
 ```            
 ### Statements
 ```
