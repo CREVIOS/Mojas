@@ -50,9 +50,8 @@ class RTError(Error):
 
 		return 'ট্রেসব্যাক (সবচেয়ে সাম্প্রতিকতম কল ):\n' + result
 
-#######################################
+
 # POSITION
-#######################################
 
 class Position:
 	def __init__(self, idx, ln, col, fn, ftxt):
@@ -75,9 +74,9 @@ class Position:
 	def copy(self):
 		return Position(self.idx, self.ln, self.col, self.fn, self.ftxt)
 
-#######################################
+
 # TOKENS
-#######################################
+
 
 TT_INT = 'পূর্ণসংখ্যা'
 TT_FLOAT = 'দশমিকসংখ্যা'
@@ -139,9 +138,9 @@ class Token:
 		if self.value: return f'{self.type}:{self.value}'
 		return f'{self.type}'
 
-#######################################
+
 # LEXER
-#######################################
+
 
 class Lexer:
 	def __init__(self, fn, text):
@@ -317,9 +316,9 @@ class Lexer:
 
 		return Token(tok_type, pos_start=pos_start, pos_end=self.pos)
 
-#######################################
+
 # NODES
-#######################################
+
 
 class NumberNode:
 	def __init__(self, tok):
@@ -463,9 +462,8 @@ class ParseResult:
 			self.error = error
 		return self
 
-#######################################
 # PARSER
-#######################################
+
 
 class Parser:
 	def __init__(self, tokens):
@@ -932,9 +930,9 @@ class Parser:
 
 		return res.success(left)
 
-#######################################
+
 # RUNTIME RESULT
-#######################################
+
 
 class RTResult:
 	def __init__(self):
@@ -953,9 +951,9 @@ class RTResult:
 		self.error = error
 		return self
 
-#######################################
+
 # VALUES
-#######################################
+
 
 class Value:
 	def __init__(self):
@@ -1210,9 +1208,9 @@ class Function(Value):
 	def __repr__(self):
 		return f"<function {self.name}>"
 
-#######################################
+
 # CONTEXT
-#######################################
+
 
 class Context:
 	def __init__(self, display_name, parent=None, parent_entry_pos=None):
@@ -1221,9 +1219,9 @@ class Context:
 		self.parent_entry_pos = parent_entry_pos
 		self.symbol_table = None
 
-#######################################
+
 # SYMBOL TABLE
-#######################################
+
 
 class SymbolTable:
 	def __init__(self, parent=None):
@@ -1242,9 +1240,9 @@ class SymbolTable:
 	def remove(self, name):
 		del self.symbols[name]
 
-#######################################
+
 # INTERPRETER
-#######################################
+
 
 class Interpreter:
 	def visit(self, node, context):
@@ -1440,9 +1438,9 @@ class Interpreter:
 		if res.error: return res
 		return res.success(return_value)
 
-#######################################
+
 # RUN
-#######################################
+
 
 global_symbol_table = SymbolTable()
 global_symbol_table.set("NULL", Number(0))
