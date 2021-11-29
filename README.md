@@ -1,6 +1,6 @@
 # Disclaimer
 
-Main Strcuture function ist added, so please wait before final version in two days. It is undergoing some update...
+Main Strcuture function is added, so please wait before final version in a few days. It is undergoing some update...
 
 # Upcoming Update
 I will introduce list in Mojas. keep an eye on the repo for it.
